@@ -10,6 +10,12 @@ Module is used in this program
 ## Information
 This discord bot api wrapper i make only can send message, but if u want to remake this can do what you want? you can!
 
+## Activate Intents
+```bash
+> Activate you're intents on discord developer portal like this image
+```
+![Intents Activate](intents-activate.png)
+
 ## Quick Example
 ```bash
 > Make a folder then put all this file's on your folder then import it as a module
