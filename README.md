@@ -16,12 +16,12 @@ This discord bot api wrapper i make only can send message, but if u want to rema
 ```
 ```Python
 import Your-folder-name
-from Your-folder-name.Intents import ALL
+from your-folder-name import Intents
 
 session = punyakita.Session({
     # You can take the discord bot token from here https://discord.com/developers/applications
     "TOKEN": "your token. Ex: 01282xidasdm-91mcoamp",
-    "INTENTS": ALL # You can see the intent here ./helpers/intents.py. Check all the privileged gateaways here if the bot don't on or get intents error : https://discord.com/developers/applications/BotID/bot
+    "INTENTS": Intents.ALL # You can see the intent here ./helpers/intents.py. Check all the privileged gateaways here if the bot don't on or get intents error : https://discord.com/developers/applications/BotID/bot
 })
 
 async def on_ready():
@@ -34,8 +34,8 @@ async def on_message_start(msg):
         })
         
 #Setup event for on_message_start & on_ready & for start the session websocket
-session.event("ready", on_ready) # "READY is event_name" "fn is you're function name "on_ready""
-session.event("message_create", on_message_start)
+session.event("READY", on_ready) # "READY is event_name" "fn is you're function name "on_ready""
+session.event("MESSAGE_CREATE", on_message_start)
 session.start()
 ```
 
