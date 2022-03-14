@@ -8,7 +8,7 @@ Module is used in this program
     - python-dateutil
 
 ## Information
-This discord bot api wrapper i make only can send message, but if u want to remake this can do what you want? you can!
+This discord bot api wrapper i make only can send message,edit msg,del msg but if u want to remake this can do what you want? you can!
 
 ## Activate Intents
 ```bash
