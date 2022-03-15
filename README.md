@@ -34,10 +34,10 @@ async def on_ready():
     print(f"Bot Online: {session.client.username}")
     
 async def on_message_start(msg):
-    if not msg.author.bot == "hi":
-        await msg.reply({
-            "content": "hi"
-        })
+    if msg.author.id == session.client.id:
+        return
+    if msg.content.startswith("!hi"):
+        await msg.reply({"content":"!hi"})
         
 #Setup event for on_message_start & on_ready & for start the session websocket
 session.event("READY", on_ready) # "READY is event_name" "fn is you're function name "on_ready""
