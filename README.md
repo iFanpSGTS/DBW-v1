@@ -27,7 +27,7 @@ from your-folder-name import Intents
 session = your-folder-name.Session({
     # You can take the discord bot token from here https://discord.com/developers/applications
     "TOKEN": "your token. Ex: 01282xidasdm-91mcoamp",
-    "INTENTS": Intents.ALL # You can see the intent here ./helpers/intents.py. Check all the privileged gateaways here if the bot don't on or get intents error : https://discord.com/developers/applications/BotID/bot
+    "INTENTS": Intents.ALL # You can see the intent here base_dbw/intents.py. Check all the privileged gateaways here if the bot don't on or get intents error : https://discord.com/developers/applications/BotID/bot
 })
 
 async def on_ready():
