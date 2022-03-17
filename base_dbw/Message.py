@@ -35,7 +35,22 @@ class Message:
                             self.__token) for i in json[key]])
             else:
                 setattr(self, key, json[key])
+    
+    async def send(self, options=None):
+        """Send message to the channel."""
+        if options is None:
+            options = {}
 
+        raise_error(options, "options", dict)
+
+        atom, result = await self.request_handler.send_async_request(f"/channels/{self.channel_id}/messages", "POST", self.__token,
+                                                                     options)
+        
+        if atom == 0:
+            return Message(result, self.__token)
+        else:
+            raise SendMessageToChannelFailed(result)
+    
     async def reply(self, options=None):
         """Reply to the message with API params."""
         if options is None:
